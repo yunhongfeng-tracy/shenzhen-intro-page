@@ -152,12 +152,28 @@
       transition: 0.2s ease;
     }
 
-    .nav-inner a:hover,
-    .nav-inner a:focus-visible {
-      background: #bae6fd;
-      border-color: #7dd3fc;
-      outline: none;
-      transform: translateY(-1px);
+    .nav-inner a.active {
+      background: #0ea5e9;
+      color: #ffffff;
+      border-color: #0284c7;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .section-tag {
+      font-size: 0.76rem;
+      color: #075985;
+      background: #e0f2fe;
+      border: 1px solid #7dd3fc;
+      border-radius: 999px;
+      padding: 3px 9px;
+      line-height: 1;
+      white-space: nowrap;
     }
 
     main { padding-bottom: 18px; }
@@ -183,12 +199,26 @@
       margin: 8px 0 0;
     }
 
-    .kpis {
+    .reading-rail {
       margin-top: 16px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 10px;
     }
+
+    .rail-item {
+      border: 1px dashed #bfdbfe;
+      background: #f8fbff;
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: #334155;
+      font-size: 0.9rem;
+    }
+
+    .rail-item b {
+      color: #0f172a;
+    }
+
 
     .kpi {
       background: linear-gradient(180deg, #f0f9ff 0%, #f8fafc 100%);
@@ -384,7 +414,10 @@
 
   <main class="container">
     <section id="overview">
-      <h2>城市概览</h2>
+      <div class="section-head">
+        <h2>城市概览</h2>
+        <span class="section-tag">Overview</span>
+      </div>
       <p class="lead">深圳位于广东省南部、珠江口东岸，是中国改革开放的重要窗口城市之一，也是在全球知名度持续上升的现代化滨海都市。</p>
       <div class="kpis">
         <div class="kpi"><b>区位优势</b><span>连接粤港澳大湾区核心走廊</span></div>
@@ -411,10 +444,18 @@
         <li><strong>2000年代：</strong>电子信息产业与供应链体系完善。</li>
         <li><strong>近十年：</strong>科技创新、金融服务与跨境协同持续强化。</li>
       </ul>
+      <div class="reading-rail">
+        <div class="rail-item"><b>定位：</b>中国创新驱动发展样本城市</div>
+        <div class="rail-item"><b>关键词：</b>效率、开放、协同、年轻化</div>
+        <div class="rail-item"><b>体验感：</b>城市快节奏与海湾慢生活并存</div>
+      </div>
     </section>
 
     <section id="landmarks">
-      <h2>地标景点</h2>
+      <div class="section-head">
+        <h2>地标景点</h2>
+        <span class="section-tag">Landmarks</span>
+      </div>
       <div class="grid">
         <figure>
           <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80" alt="深圳城市高楼天际线" loading="lazy" />
@@ -437,7 +478,10 @@
     </section>
 
     <section id="industry">
-      <h2>产业与创新</h2>
+      <div class="section-head">
+        <h2>产业与创新</h2>
+        <span class="section-tag">Innovation</span>
+      </div>
       <div class="two-col">
         <div>
           <p>深圳是中国重要的科技创新中心，形成电子信息、通信设备、人工智能、先进制造、生物医药、新能源汽车等产业集群。</p>
@@ -454,7 +498,10 @@
     </section>
 
     <section id="culture">
-      <h2>文化与城市生活</h2>
+      <div class="section-head">
+        <h2>文化与城市生活</h2>
+        <span class="section-tag">Lifestyle</span>
+      </div>
       <div class="grid">
         <div class="card">
           <h3>多元融合</h3>
@@ -472,7 +519,10 @@
     </section>
 
     <section id="food">
-      <h2>美食推荐</h2>
+      <div class="section-head">
+        <h2>美食推荐</h2>
+        <span class="section-tag">Food</span>
+      </div>
       <p class="lead">深圳是“全国味道集散地”，既能吃到地道粤菜，也能找到各地风味与国际餐饮。</p>
       <div class="grid">
         <div class="card">
@@ -491,7 +541,10 @@
     </section>
 
     <section id="transport">
-      <h2>交通出行</h2>
+      <div class="section-head">
+        <h2>交通出行</h2>
+        <span class="section-tag">Transit</span>
+      </div>
       <div class="two-col">
         <div>
           <ul>
@@ -512,7 +565,10 @@
     </section>
 
     <section id="itinerary">
-      <h2>旅行建议（2天示例）</h2>
+      <div class="section-head">
+        <h2>旅行建议（2天示例）</h2>
+        <span class="section-tag">Plan</span>
+      </div>
       <div class="grid">
         <div class="card">
           <h3>Day 1：城市地标线</h3>
@@ -529,7 +585,10 @@
     </section>
 
     <section id="faq">
-      <h2>常见问题</h2>
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <span class="section-tag">FAQ</span>
+      </div>
       <div class="faq">
         <details>
           <summary>第一次来深圳，住哪里更方便？</summary>
@@ -552,5 +611,22 @@
   <footer>
     <p>页面制作：深圳城市介绍专题页（图文资料用于展示与学习）</p>
   </footer>
+  <script>
+    const sections = Array.from(document.querySelectorAll('main section[id]'));
+    const navLinks = Array.from(document.querySelectorAll('.nav-inner a'));
+    const map = new Map(navLinks.map(link => [link.getAttribute('href')?.slice(1), link]));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach((l) => l.classList.remove('active'));
+        const active = map.get(id);
+        if (active) active.classList.add('active');
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 });
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
 </body>
 </html>
