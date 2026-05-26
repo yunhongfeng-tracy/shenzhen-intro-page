@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>深圳：创新之城，山海之城</title>
+  <meta name="description" content="全面介绍深圳的历史、地标、产业、美食、交通与旅行建议，带你快速了解这座中国最具活力的城市之一。" />
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --accent: #10b981;
+      --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a { color: var(--primary-dark); }
+
+    header {
+      background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 55%, #7c3aed 100%);
+      color: #fff;
+      padding: 72px 20px 56px;
+      text-align: center;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-sub {
+      margin: 16px auto 0;
+      max-width: 760px;
+      font-size: 1.06rem;
+      opacity: 0.95;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.82);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav-inner {
+      display: flex;
+      gap: 16px;
+      padding: 12px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .nav-inner a {
+      text-decoration: none;
+      color: #111827;
+      background: #eef2ff;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.92rem;
+      transition: 0.2s;
+    }
+
+    .nav-inner a:hover { background: #dbeafe; }
+
+    section {
+      margin: 28px 0;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #0f172a;
+    }
+
+    .lead {
+      color: var(--muted);
+      margin-top: -6px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+    }
+
+    figure img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    figcaption {
+      padding: 10px 12px;
+      font-size: 0.9rem;
+      color: #475569;
+      background: #f8fafc;
+    }
+
+    .two-col {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1.2fr 1fr;
+    }
+
+    ul { padding-left: 20px; }
+
+    .tips {
+      background: #ecfeff;
+      border: 1px solid #a5f3fc;
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    footer {
+      text-align: center;
+      color: #6b7280;
+      padding: 20px 12px 36px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .two-col { grid-template-columns: 1fr; }
+      figure img { height: 200px; }
+      section { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="hero-title">深圳：创新之城，山海之城</h1>
+      <p class="hero-sub">从渔村到国际化大都市，深圳在短短几十年间完成惊人的城市跃迁。这里既有全球领先的科技产业，也有宜人的滨海风光与年轻、多元、包容的城市气质。</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#overview">城市概览</a>
+      <a href="#landmarks">地标景点</a>
+      <a href="#industry">产业与创新</a>
+      <a href="#culture">文化与生活</a>
+      <a href="#food">美食推荐</a>
+      <a href="#transport">交通出行</a>
+      <a href="#itinerary">旅行建议</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="overview">
+      <h2>城市概览</h2>
+      <p class="lead">深圳位于广东省南部、珠江口东岸，毗邻香港，是中国改革开放的重要窗口城市之一。</p>
+      <div class="grid">
+        <div class="card">
+          <h3>地理位置</h3>
+          <p>东临大亚湾与大鹏湾，西接珠江口，拥有绵长海岸线和丰富山海资源，是少有的“中心城区可快速到海边”的一线城市。</p>
+        </div>
+        <div class="card">
+          <h3>城市气质</h3>
+          <p>年轻、务实、开放。深圳吸引了来自全国乃至全球的人才，形成了高流动、高效率、重创新的城市文化。</p>
+        </div>
+        <div class="card">
+          <h3>气候特点</h3>
+          <p>亚热带海洋性季风气候，全年温暖湿润。秋冬季较舒适，春夏降雨与台风较多，出行需留意天气预报。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="landmarks">
+      <h2>地标景点</h2>
+      <div class="grid">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80" alt="深圳平安金融中心与福田CBD夜景" loading="lazy" />
+          <figcaption>福田CBD：高楼林立的城市天际线，展现深圳现代都市风貌。</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80" alt="深圳湾公园海滨步道" loading="lazy" />
+          <figcaption>深圳湾公园：骑行、慢跑、观海与看日落的热门城市绿道。</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80" alt="大鹏半岛海岸风光" loading="lazy" />
+          <figcaption>大鹏半岛：山海相拥，适合周末露营、徒步和海边度假。</figcaption>
+        </figure>
+      </div>
+      <ul>
+        <li><strong>莲花山公园：</strong>可俯瞰福田核心区，市民休闲与观景好去处。</li>
+        <li><strong>华侨城片区：</strong>主题公园、创意园区与艺术空间集中，适合家庭与年轻游客。</li>
+        <li><strong>南头古城：</strong>在现代都市中保留历史肌理，融合展览、文创与街巷生活。</li>
+      </ul>
+    </section>
+
+    <section id="industry">
+      <h2>产业与创新</h2>
+      <div class="two-col">
+        <div>
+          <p>深圳是中国重要的科技创新中心，形成了电子信息、通信设备、人工智能、先进制造、生物医药、新能源汽车等产业集群。</p>
+          <p>以南山科技园、前海深港现代服务业合作区、河套深港科技创新合作区为代表，深圳持续推动“科技 + 金融 + 场景”联动，加速科研成果产业化。</p>
+          <div class="tips">
+            <strong>关键词：</strong>硬件创新、供应链协同、创业生态、国际化营商环境。
+          </div>
+        </div>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="科技芯片与电子产业意象" loading="lazy" />
+          <figcaption>深圳创新生态：从研发、制造到应用落地的完整链条。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="culture">
+      <h2>文化与城市生活</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>多元融合</h3>
+          <p>外来人口占比高，南北文化、国内外文化交融，带来丰富的生活方式与审美选择。</p>
+        </div>
+        <div class="card">
+          <h3>公共空间友好</h3>
+          <p>公园密集、绿道完善、滨海空间开放，城市休闲体验突出，适合步行和骑行。</p>
+        </div>
+        <div class="card">
+          <h3>夜生活活跃</h3>
+          <p>商圈、演出、展览和深夜美食丰富，城市在夜晚依然充满活力。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="food">
+      <h2>美食推荐</h2>
+      <p class="lead">深圳是“全国味道集散地”，既能吃到地道粤菜，也能找到各地风味与国际餐饮。</p>
+      <div class="grid">
+        <div class="card">
+          <h3>粤式经典</h3>
+          <p>早茶点心、烧腊、煲仔饭、海鲜粥是高频选择，口味清鲜讲究食材。</p>
+        </div>
+        <div class="card">
+          <h3>潮汕风味</h3>
+          <p>牛肉火锅、卤鹅、砂锅粥在深圳颇受欢迎，适合多人聚餐。</p>
+        </div>
+        <div class="card">
+          <h3>全球餐饮</h3>
+          <p>从东南亚料理到欧陆餐厅，国际化社区带来了丰富的异国风味。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="transport">
+      <h2>交通出行</h2>
+      <div class="two-col">
+        <div>
+          <ul>
+            <li><strong>地铁：</strong>线路覆盖广、换乘便捷，是市内出行首选。</li>
+            <li><strong>高铁：</strong>经深圳北、福田等站可高效连接粤港澳大湾区及全国主要城市。</li>
+            <li><strong>航空：</strong>深圳宝安国际机场航线密集，国内外通达性强。</li>
+            <li><strong>跨境：</strong>多口岸可往返香港，商务与旅游往来便利。</li>
+          </ul>
+        </div>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80" alt="现代城市轨道交通与夜景" loading="lazy" />
+          <figcaption>高效交通网络是深圳高节奏城市运行的重要支撑。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="itinerary">
+      <h2>旅行建议（2天示例）</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Day 1：城市地标线</h3>
+          <p>福田CBD → 莲花山公园 → 深圳博物馆或当代艺术馆 → 深圳湾公园日落 → 夜间商圈。</p>
+        </div>
+        <div class="card">
+          <h3>Day 2：山海休闲线</h3>
+          <p>南头古城晨逛 → 华侨城创意园午后咖啡 → 大鹏半岛或海边公园 → 海鲜晚餐。</p>
+        </div>
+      </div>
+      <div class="tips" style="margin-top: 14px;">
+        <strong>出行提示：</strong>建议优先地铁+步行；夏季注意防晒补水；节假日热门景点建议错峰前往。
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>页面制作：深圳城市介绍专题页（图文资料用于展示与学习）</p>
+  </footer>
+</body>
+</html>
