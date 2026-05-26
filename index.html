@@ -3,308 +3,297 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>深圳：创新之城，山海之城</title>
-  <meta name="description" content="全面介绍深圳的历史、地标、产业、美食、交通与旅行建议，带你快速了解这座中国最具活力的城市之一。" />
+  <title>深圳：创新之城，山海之间</title>
+  <meta name="description" content="深圳城市专题页：从改革开放窗口到全球创新引擎，涵盖地标、产业、生活方式、美食与2天旅行路线。" />
   <style>
     :root {
-      --bg: #eef4ff;
-      --bg-2: #f8fbff;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --primary: #0284c7;
-      --primary-2: #0369a1;
-      --accent: #0ea5e9;
-      --ok: #059669;
-      --line: #dbe7ff;
-      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --bg: #06121f;
+      --bg-soft: #0b1d31;
+      --surface: #10243a;
+      --surface-2: #152e47;
+      --line: #224565;
+      --text: #eaf3ff;
+      --muted: #9eb7d2;
+      --aqua: #37d7ff;
+      --gold: #f6c35d;
+      --mint: #31d6a7;
       --radius: 18px;
+      --shadow: 0 16px 38px rgba(0, 0, 0, 0.35);
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif;
       color: var(--text);
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.68;
       background:
-        radial-gradient(circle at 8% 0%, #bfdbfe 0%, transparent 28%),
-        radial-gradient(circle at 92% 15%, #a5f3fc 0%, transparent 26%),
+        radial-gradient(1200px 520px at 10% -8%, rgba(55, 215, 255, 0.16), transparent 58%),
+        radial-gradient(900px 450px at 100% 8%, rgba(246, 195, 93, 0.12), transparent 62%),
         var(--bg);
-      line-height: 1.7;
     }
 
-    a { color: var(--primary-2); }
+    a { color: var(--aqua); text-decoration-color: rgba(55, 215, 255, 0.45); }
 
     .container {
-      width: min(1160px, 92vw);
+      width: min(1180px, 92vw);
       margin: 0 auto;
     }
 
-    header {
+    .hero {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(128deg, #0c4a6e 0%, #0369a1 45%, #0ea5e9 100%);
-      color: #fff;
-      padding: 78px 20px 58px;
-      text-align: center;
+      padding: 84px 0 56px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    header::before,
-    header::after {
+    .hero::before,
+    .hero::after {
       content: "";
       position: absolute;
       border-radius: 999px;
-      filter: blur(1px);
-      opacity: 0.35;
+      filter: blur(2px);
+      z-index: -1;
     }
 
-    header::before {
-      width: 320px;
-      height: 320px;
-      background: #67e8f9;
-      top: -120px;
-      right: -60px;
+    .hero::before {
+      width: 330px;
+      height: 330px;
+      right: -110px;
+      top: -90px;
+      background: rgba(55, 215, 255, 0.2);
     }
 
-    header::after {
-      width: 240px;
-      height: 240px;
-      background: #93c5fd;
-      bottom: -100px;
-      left: -40px;
+    .hero::after {
+      width: 300px;
+      height: 300px;
+      left: -90px;
+      bottom: -120px;
+      background: rgba(246, 195, 93, 0.13);
     }
 
-    .hero-title {
-      position: relative;
-      margin: 0;
-      font-size: clamp(2.1rem, 4.2vw, 3.25rem);
-      line-height: 1.16;
-      letter-spacing: 0.5px;
-      animation: rise 0.7s ease-out both;
-    }
-
-    .hero-sub {
-      position: relative;
-      margin: 16px auto 0;
-      max-width: 790px;
-      font-size: 1.06rem;
-      opacity: 0.96;
-      animation: rise 0.9s ease-out both;
-    }
-
-    .quick-facts {
-      position: relative;
-      margin: 22px auto 0;
+    .hero-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+      align-items: end;
+    }
+
+    .kicker {
+      display: inline-block;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 215, 255, 0.55);
+      background: rgba(55, 215, 255, 0.09);
+      color: #d9f7ff;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 14px 0 10px;
+      font-size: clamp(2.3rem, 4vw, 3.8rem);
+      line-height: 1.12;
+      letter-spacing: 0.6px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      color: #c8dcf1;
+      font-size: 1.04rem;
+    }
+
+    .hero-stat-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 1fr));
       gap: 10px;
-      max-width: 860px;
-      animation: rise 1.1s ease-out both;
     }
 
-    .fact {
-      background: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 12px;
-      padding: 10px 8px;
-      backdrop-filter: blur(4px);
+    .hero-stat {
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      background: rgba(16, 36, 58, 0.75);
+      border-radius: 14px;
+      padding: 12px;
+      backdrop-filter: blur(6px);
     }
 
-    .fact strong {
+    .hero-stat b {
       display: block;
-      font-size: 0.96rem;
+      font-size: 1.02rem;
+      color: #fef3d4;
     }
 
-    .fact span {
-      font-size: 0.85rem;
-      opacity: 0.9;
-    }
+    .hero-stat span { color: var(--muted); font-size: 0.86rem; }
 
     nav {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(9px);
-      background: rgba(248, 250, 252, 0.83);
-      border-bottom: 1px solid #dbeafe;
+      z-index: 25;
+      backdrop-filter: blur(8px);
+      background: rgba(6, 18, 31, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
-    .nav-inner {
+    .nav-links {
       display: flex;
-      gap: 12px;
-      padding: 12px 0;
-      overflow-x: auto;
+      gap: 10px;
       white-space: nowrap;
+      overflow-x: auto;
+      padding: 11px 0;
       scrollbar-width: thin;
     }
 
-    .nav-inner a {
+    .nav-links a {
       text-decoration: none;
-      color: #0f172a;
-      background: #dbeafe;
-      border: 1px solid #bfdbfe;
+      color: #d7ecff;
+      border: 1px solid rgba(55, 215, 255, 0.22);
+      background: rgba(55, 215, 255, 0.06);
       border-radius: 999px;
-      padding: 7px 14px;
-      font-size: 0.9rem;
-      transition: 0.2s ease;
+      padding: 6px 13px;
+      font-size: 0.88rem;
+      transition: .2s ease;
     }
 
-    .nav-inner a.active {
-      background: #0ea5e9;
-      color: #ffffff;
-      border-color: #0284c7;
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #082132;
+      background: var(--aqua);
+      border-color: var(--aqua);
     }
 
-    .section-head {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 6px;
-    }
-
-    .section-tag {
-      font-size: 0.76rem;
-      color: #075985;
-      background: #e0f2fe;
-      border: 1px solid #7dd3fc;
-      border-radius: 999px;
-      padding: 3px 9px;
-      line-height: 1;
-      white-space: nowrap;
-    }
-
-    main { padding-bottom: 18px; }
+    main { padding: 20px 0 26px; }
 
     section {
-      margin: 28px 0;
-      background: var(--card);
+      background: linear-gradient(180deg, rgba(16,36,58,.92), rgba(16,36,58,.86));
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 30px;
+      padding: 28px;
+      margin: 22px 0;
     }
 
-    h2 {
+    .head {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 8px;
+    }
+
+    .head h2 {
       margin: 0;
-      font-size: 1.68rem;
-      color: #0f172a;
+      font-size: 1.6rem;
       letter-spacing: 0.3px;
     }
 
-    .lead {
-      color: var(--muted);
-      margin: 8px 0 0;
+    .tag {
+      font-size: 0.72rem;
+      color: #fef3d4;
+      border: 1px solid rgba(246,195,93,.48);
+      background: rgba(246,195,93,.12);
+      border-radius: 999px;
+      padding: 3px 9px;
+      line-height: 1;
     }
 
-    .reading-rail {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-
-    .rail-item {
-      border: 1px dashed #bfdbfe;
-      background: #f8fbff;
-      border-radius: 12px;
-      padding: 10px 12px;
-      color: #334155;
-      font-size: 0.9rem;
-    }
-
-    .rail-item b {
-      color: #0f172a;
-    }
-
-
-    .kpi {
-      background: linear-gradient(180deg, #f0f9ff 0%, #f8fafc 100%);
-      border: 1px solid #dbeafe;
-      border-radius: 12px;
-      padding: 10px 12px;
-    }
-
-    .kpi b {
-      display: block;
-      color: #0c4a6e;
-      font-size: 1.02rem;
-    }
-
-    .kpi span { color: #475569; font-size: 0.88rem; }
+    .lead { margin: 0; color: var(--muted); }
 
     .grid {
-      display: grid;
-      gap: 18px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       margin-top: 14px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 
     .card {
-      background: var(--bg-2);
-      border: 1px solid #e2e8f0;
+      border: 1px solid rgba(255,255,255,.1);
+      background: linear-gradient(180deg, var(--surface), var(--surface-2));
       border-radius: 14px;
-      padding: 14px;
+      padding: 13px;
     }
 
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 1.06rem;
+    .card h3 { margin: 0 0 7px; font-size: 1.03rem; color: #e8f8ff; }
+    .card p { margin: 0; color: #bad2ea; }
+
+    .kpi {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+
+    .kpi-item {
+      border-left: 3px solid var(--aqua);
+      background: rgba(55, 215, 255, 0.07);
+      border-radius: 10px;
+      padding: 9px 10px;
+    }
+
+    .kpi-item b { display: block; color: #def8ff; }
+    .kpi-item span { color: #9ec0de; font-size: .87rem; }
+
+    .media {
+      margin-top: 14px;
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
     figure {
       margin: 0;
-      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
       border-radius: 14px;
-      border: 1px solid #dbeafe;
-      background: #fff;
+      overflow: hidden;
+      background: #0e2236;
     }
 
     figure img {
       width: 100%;
-      height: 228px;
+      height: 220px;
       object-fit: cover;
       display: block;
-      transition: transform 0.35s ease;
+      transition: transform .35s ease;
     }
 
     figure:hover img { transform: scale(1.03); }
 
     figcaption {
-      padding: 10px 12px;
-      font-size: 0.9rem;
-      color: #475569;
-      background: #f8fafc;
-      border-top: 1px solid #e2e8f0;
+      font-size: .9rem;
+      color: #b8d1ea;
+      background: #10273d;
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: 10px 11px;
     }
 
-    .two-col {
+    .split {
+      margin-top: 14px;
       display: grid;
-      gap: 20px;
-      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+      grid-template-columns: 1.25fr 1fr;
       align-items: start;
     }
 
-    ul { padding-left: 20px; }
-
-    .timeline {
-      margin-top: 14px;
-      border-left: 3px solid #7dd3fc;
-      padding-left: 14px;
-    }
-
-    .timeline li {
-      margin: 8px 0;
-      color: #334155;
-    }
+    ul { margin: 10px 0 0; padding-left: 20px; color: #bdd4ea; }
+    li { margin: 7px 0; }
 
     .tips {
-      background: #ecfeff;
-      border: 1px solid #a5f3fc;
+      margin-top: 12px;
+      border: 1px solid rgba(49, 214, 167, 0.45);
+      border-left: 4px solid var(--mint);
       border-radius: 12px;
-      padding: 14px 16px;
+      padding: 12px 13px;
+      background: rgba(49, 214, 167, 0.1);
+      color: #d7ffef;
+    }
+
+    .route {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
     }
 
     .faq {
@@ -314,319 +303,243 @@
     }
 
     details {
-      border: 1px solid #dbeafe;
+      border: 1px solid rgba(255,255,255,.15);
       border-radius: 12px;
-      background: #f8fbff;
-      padding: 10px 12px;
+      background: rgba(255,255,255,.03);
+      padding: 9px 11px;
     }
 
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      color: #0f172a;
-    }
+    summary { cursor: pointer; font-weight: 600; color: #def5ff; }
+    details p { margin: 8px 0 0; color: #b8d0e7; }
 
-    summary::marker { color: var(--accent); }
-
-    details p {
-      margin: 8px 0 0;
-      color: #475569;
-    }
-
-    .top-link {
+    .top {
       position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 15;
+      right: 16px;
+      bottom: 16px;
       width: 44px;
       height: 44px;
       border-radius: 999px;
-      border: 1px solid #7dd3fc;
-      background: #e0f2fe;
-      color: #075985;
-      font-size: 0.95rem;
+      border: 1px solid rgba(55, 215, 255, .6);
+      background: rgba(55, 215, 255, .17);
+      color: #d9f6ff;
       display: grid;
       place-items: center;
       text-decoration: none;
-      box-shadow: var(--shadow);
+      z-index: 18;
     }
-
-    .top-link:hover { background: #bae6fd; }
 
     footer {
+      color: #95b3d1;
       text-align: center;
-      color: #64748b;
-      padding: 18px 12px 30px;
-      font-size: 0.9rem;
+      padding: 12px 12px 28px;
+      font-size: .89rem;
     }
 
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .fade-in { animation: fade .55s ease both; }
+    @keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 980px) {
-      .quick-facts { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
-      .two-col { grid-template-columns: 1fr; }
-      figure img { height: 210px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .split { grid-template-columns: 1fr; }
       section { padding: 22px; }
     }
 
     @media (max-width: 640px) {
-      .container { width: min(1160px, 94vw); }
-      header { padding: 62px 14px 48px; }
-      .hero-sub { font-size: 0.98rem; }
-      h2 { font-size: 1.4rem; }
-      .top-link { right: 12px; bottom: 12px; }
+      .container { width: min(1180px, 94vw); }
+      .hero { padding: 68px 0 46px; }
+      h1 { font-size: clamp(2rem, 9vw, 3rem); }
+      figure img { height: 200px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
 <body id="top">
-  <header>
-    <div class="container">
-      <h1 class="hero-title">深圳：创新之城，山海之城</h1>
-      <p class="hero-sub">从渔村到国际化大都市，深圳在短短几十年间完成惊人的城市跃迁。这里既有全球领先的科技产业，也有宜人的滨海风光与年轻、多元、包容的城市气质。</p>
-      <div class="quick-facts">
-        <div class="fact"><strong>城市定位</strong><span>国家创新型城市</span></div>
-        <div class="fact"><strong>地理特征</strong><span>山海相连，毗邻香港</span></div>
-        <div class="fact"><strong>出行效率</strong><span>地铁网络高密覆盖</span></div>
-        <div class="fact"><strong>产业标签</strong><span>科技、金融、先进制造</span></div>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="kicker">Shenzhen City Guide</span>
+        <h1>深圳：创新引擎与海湾生活的双重城市</h1>
+        <p>深圳是中国改革开放的标志性城市，也是全球产业链协同最强的创新高地之一。在这座城市，你可以在高密度商业区感受速度，也可以在滨海绿道、山地公园中切换到松弛节奏。</p>
+      </div>
+      <div class="hero-stat-wrap">
+        <div class="hero-stat"><b>关键词</b><span>创新、效率、开放、多元</span></div>
+        <div class="hero-stat"><b>城市结构</b><span>总部经济 + 山海生态</span></div>
+        <div class="hero-stat"><b>游客体验</b><span>地铁友好，跨区效率高</span></div>
+        <div class="hero-stat"><b>适合人群</b><span>商务、城市探索、周末度假</span></div>
       </div>
     </div>
   </header>
 
   <nav>
-    <div class="container nav-inner">
+    <div class="container nav-links">
       <a href="#overview">城市概览</a>
       <a href="#landmarks">地标景点</a>
       <a href="#industry">产业与创新</a>
-      <a href="#culture">文化与生活</a>
+      <a href="#culture">文化生活</a>
       <a href="#food">美食推荐</a>
       <a href="#transport">交通出行</a>
-      <a href="#itinerary">旅行建议</a>
+      <a href="#itinerary">旅行路线</a>
       <a href="#faq">常见问题</a>
     </div>
   </nav>
 
   <main class="container">
-    <section id="overview">
-      <div class="section-head">
-        <h2>城市概览</h2>
-        <span class="section-tag">Overview</span>
-      </div>
-      <p class="lead">深圳位于广东省南部、珠江口东岸，是中国改革开放的重要窗口城市之一，也是在全球知名度持续上升的现代化滨海都市。</p>
-      <div class="kpis">
-        <div class="kpi"><b>区位优势</b><span>连接粤港澳大湾区核心走廊</span></div>
-        <div class="kpi"><b>城市节奏</b><span>年轻化、高效率、重执行</span></div>
-        <div class="kpi"><b>空间特点</b><span>中心城区与海湾生态并存</span></div>
-        <div class="kpi"><b>国际联系</b><span>跨境商务与人才流动活跃</span></div>
+    <section id="overview" class="fade-in">
+      <div class="head"><h2>城市概览</h2><span class="tag">OVERVIEW</span></div>
+      <p class="lead">深圳位于广东省南部、珠江口东岸，毗邻香港，是粤港澳大湾区核心节点之一。它最鲜明的特征是“变化快、执行快、产业协同快”。</p>
+      <div class="kpi">
+        <div class="kpi-item"><b>地理区位</b><span>连接香港与珠三角制造腹地</span></div>
+        <div class="kpi-item"><b>城市气质</b><span>年轻化人口结构，创业氛围浓</span></div>
+        <div class="kpi-item"><b>生活感受</b><span>高节奏工作与高品质公共空间并存</span></div>
+        <div class="kpi-item"><b>气候提示</b><span>秋冬更舒适，春夏注意降雨与台风</span></div>
       </div>
       <div class="grid">
-        <div class="card">
-          <h3>地理位置</h3>
-          <p>东临大亚湾与大鹏湾，西接珠江口，拥有绵长海岸线和丰富山海资源，是少有的“中心城区可快速到海边”的一线城市。</p>
-        </div>
-        <div class="card">
-          <h3>城市气质</h3>
-          <p>年轻、务实、开放。深圳吸引了来自全国乃至全球的人才，形成高流动、高协作、强创新的城市文化。</p>
-        </div>
-        <div class="card">
-          <h3>气候特点</h3>
-          <p>亚热带海洋性季风气候，全年温暖湿润。秋冬季更舒适，春夏降雨与台风较多，出行需关注天气预报。</p>
-        </div>
-      </div>
-      <ul class="timeline">
-        <li><strong>1979年后：</strong>经济特区建设启动，城市化快速推进。</li>
-        <li><strong>2000年代：</strong>电子信息产业与供应链体系完善。</li>
-        <li><strong>近十年：</strong>科技创新、金融服务与跨境协同持续强化。</li>
-      </ul>
-      <div class="reading-rail">
-        <div class="rail-item"><b>定位：</b>中国创新驱动发展样本城市</div>
-        <div class="rail-item"><b>关键词：</b>效率、开放、协同、年轻化</div>
-        <div class="rail-item"><b>体验感：</b>城市快节奏与海湾慢生活并存</div>
+        <article class="card"><h3>从特区到国际都市</h3><p>深圳在几十年内完成从边陲小镇到国际化大都市的跃迁，成为中国城市化与产业升级的样本。</p></article>
+        <article class="card"><h3>山海资源可达性强</h3><p>中心城区到海湾、公园和山地的通达性很好，形成“商务 + 户外”兼容的城市体验。</p></article>
+        <article class="card"><h3>跨境连接优势</h3><p>多口岸与香港联动，使商务往来、人才流动和国际服务业更具效率。</p></article>
       </div>
     </section>
 
-    <section id="landmarks">
-      <div class="section-head">
-        <h2>地标景点</h2>
-        <span class="section-tag">Landmarks</span>
-      </div>
-      <div class="grid">
+    <section id="landmarks" class="fade-in">
+      <div class="head"><h2>地标景点</h2><span class="tag">LANDMARKS</span></div>
+      <p class="lead">深圳的景点分布呈现“城市天际线 + 海湾生态 + 历史街区”三层结构，适合不同偏好游客。</p>
+      <div class="media">
         <figure>
-          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80" alt="深圳城市高楼天际线" loading="lazy" />
-          <figcaption>福田CBD：高楼林立的城市天际线，展现深圳现代都市风貌。</figcaption>
+          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80" alt="深圳城市天际线" loading="lazy" />
+          <figcaption>福田CBD：现代都市轮廓最集中的区域之一。</figcaption>
         </figure>
         <figure>
-          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80" alt="海滨步道与城市海岸线" loading="lazy" />
-          <figcaption>深圳湾公园：骑行、慢跑、观海与看日落的热门城市绿道。</figcaption>
+          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80" alt="深圳湾海滨步道" loading="lazy" />
+          <figcaption>深圳湾公园：跑步、骑行、观海和看日落的热门路线。</figcaption>
         </figure>
         <figure>
-          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80" alt="山海相连的海岸自然风光" loading="lazy" />
-          <figcaption>大鹏半岛：山海相拥，适合周末露营、徒步和海边度假。</figcaption>
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80" alt="大鹏半岛山海风光" loading="lazy" />
+          <figcaption>大鹏半岛：周末出游首选，兼具海岸与山地地貌。</figcaption>
         </figure>
       </div>
       <ul>
-        <li><strong>莲花山公园：</strong>可俯瞰福田核心区，市民休闲与观景好去处。</li>
-        <li><strong>华侨城片区：</strong>主题公园、创意园区与艺术空间集中，适合家庭与年轻游客。</li>
-        <li><strong>南头古城：</strong>在现代都市中保留历史肌理，融合展览、文创与街巷生活。</li>
+        <li><strong>莲花山公园：</strong>俯瞰核心区的经典观景点。</li>
+        <li><strong>南头古城：</strong>历史肌理与当代文创融合。</li>
+        <li><strong>华侨城片区：</strong>主题娱乐与创意园区集中分布。</li>
       </ul>
     </section>
 
-    <section id="industry">
-      <div class="section-head">
-        <h2>产业与创新</h2>
-        <span class="section-tag">Innovation</span>
-      </div>
-      <div class="two-col">
+    <section id="industry" class="fade-in">
+      <div class="head"><h2>产业与创新</h2><span class="tag">INNOVATION</span></div>
+      <div class="split">
         <div>
-          <p>深圳是中国重要的科技创新中心，形成电子信息、通信设备、人工智能、先进制造、生物医药、新能源汽车等产业集群。</p>
-          <p>以南山科技园、前海深港现代服务业合作区、河套深港科技创新合作区为代表，深圳持续推动“科技 + 金融 + 场景”联动，加速科研成果产业化。</p>
-          <div class="tips">
-            <strong>关键词：</strong>硬件创新、供应链协同、创业生态、国际化营商环境。
-          </div>
+          <p class="lead">深圳的核心竞争力是“研发-制造-市场”闭环速度。电子信息、通信设备、人工智能、新能源汽车、生物医药等产业形成了强耦合生态。</p>
+          <ul>
+            <li><strong>南山科技园：</strong>创新企业与研发机构高密度集聚。</li>
+            <li><strong>前海：</strong>金融与现代服务业联动，提升跨境协同效率。</li>
+            <li><strong>河套合作区：</strong>面向深港科技合作与成果转化场景。</li>
+          </ul>
+          <div class="tips"><strong>观察角度：</strong>在深圳，创新不仅来自实验室，也来自供应链整合与快速迭代的工程能力。</div>
         </div>
         <figure>
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="芯片与电子科技意象" loading="lazy" />
-          <figcaption>深圳创新生态：从研发、制造到应用落地的完整链条。</figcaption>
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="芯片与电子科技场景" loading="lazy" />
+          <figcaption>创新生态的关键在于跨团队协作与产业链响应速度。</figcaption>
         </figure>
       </div>
     </section>
 
-    <section id="culture">
-      <div class="section-head">
-        <h2>文化与城市生活</h2>
-        <span class="section-tag">Lifestyle</span>
-      </div>
+    <section id="culture" class="fade-in">
+      <div class="head"><h2>文化生活</h2><span class="tag">LIFESTYLE</span></div>
       <div class="grid">
-        <div class="card">
-          <h3>多元融合</h3>
-          <p>外来人口占比高，南北文化、国内外文化交融，带来丰富生活方式与审美选择。</p>
-        </div>
-        <div class="card">
-          <h3>公共空间友好</h3>
-          <p>公园密集、绿道完善、滨海空间开放，城市休闲体验突出，适合步行与骑行。</p>
-        </div>
-        <div class="card">
-          <h3>夜生活活跃</h3>
-          <p>商圈、演出、展览和深夜美食丰富，城市在夜晚依然保持高活力。</p>
-        </div>
+        <article class="card"><h3>多元融合</h3><p>全国各地及海外人才聚集，形成高度包容、更新快的生活方式。</p></article>
+        <article class="card"><h3>公共空间友好</h3><p>绿道、公园和海湾步道覆盖面广，日常户外活动门槛低。</p></article>
+        <article class="card"><h3>夜间活力</h3><p>商圈、展览、演出和深夜餐饮密度高，夜生活选择丰富。</p></article>
       </div>
     </section>
 
-    <section id="food">
-      <div class="section-head">
-        <h2>美食推荐</h2>
-        <span class="section-tag">Food</span>
-      </div>
-      <p class="lead">深圳是“全国味道集散地”，既能吃到地道粤菜，也能找到各地风味与国际餐饮。</p>
+    <section id="food" class="fade-in">
+      <div class="head"><h2>美食推荐</h2><span class="tag">FOOD</span></div>
+      <p class="lead">深圳不是单一菜系城市，而是全国乃至全球餐饮风味的汇聚地。</p>
       <div class="grid">
-        <div class="card">
-          <h3>粤式经典</h3>
-          <p>早茶点心、烧腊、煲仔饭、海鲜粥是高频选择，口味清鲜讲究食材。</p>
-        </div>
-        <div class="card">
-          <h3>潮汕风味</h3>
-          <p>牛肉火锅、卤鹅、砂锅粥在深圳颇受欢迎，适合多人聚餐。</p>
-        </div>
-        <div class="card">
-          <h3>全球餐饮</h3>
-          <p>从东南亚料理到欧陆餐厅，国际化社区带来了丰富的异国风味。</p>
-        </div>
+        <article class="card"><h3>粤式经典</h3><p>早茶、烧腊、煲仔饭、海鲜粥，强调食材和火候。</p></article>
+        <article class="card"><h3>潮汕风味</h3><p>牛肉火锅、卤鹅、砂锅粥，适合多人聚餐。</p></article>
+        <article class="card"><h3>国际化餐饮</h3><p>东南亚、欧陆与融合料理在主要商圈都能找到高质量选择。</p></article>
       </div>
     </section>
 
-    <section id="transport">
-      <div class="section-head">
-        <h2>交通出行</h2>
-        <span class="section-tag">Transit</span>
-      </div>
-      <div class="two-col">
+    <section id="transport" class="fade-in">
+      <div class="head"><h2>交通出行</h2><span class="tag">TRANSIT</span></div>
+      <div class="split">
         <div>
           <ul>
-            <li><strong>地铁：</strong>线路覆盖广、换乘便捷，是市内出行首选。</li>
-            <li><strong>高铁：</strong>经深圳北、福田等站可高效连接粤港澳大湾区及全国主要城市。</li>
-            <li><strong>航空：</strong>深圳宝安国际机场航线密集，国内外通达性强。</li>
-            <li><strong>跨境：</strong>多口岸可往返香港，商务与旅游往来便利。</li>
+            <li><strong>地铁：</strong>网络覆盖广，跨区效率高，是首选通行方式。</li>
+            <li><strong>高铁：</strong>深圳北、福田等枢纽连接湾区及全国主要城市。</li>
+            <li><strong>机场：</strong>深圳宝安国际机场航线密集，国内外可达性强。</li>
+            <li><strong>跨境：</strong>多口岸往返香港，商务与旅游灵活性高。</li>
           </ul>
-          <div class="tips">
-            <strong>建议：</strong>游客优先使用地铁 + 步行，通勤时段错峰出行体验更好。
-          </div>
+          <div class="tips"><strong>出行建议：</strong>城市游优先“地铁 + 步行”，节假日重点区域建议早出晚归错峰安排。</div>
         </div>
         <figure>
-          <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80" alt="现代城市轨道交通夜景" loading="lazy" />
-          <figcaption>高效交通网络是深圳高节奏城市运行的重要支撑。</figcaption>
+          <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80" alt="城市轨道交通夜景" loading="lazy" />
+          <figcaption>高效交通网络是深圳城市运行的重要基础设施。</figcaption>
         </figure>
       </div>
     </section>
 
-    <section id="itinerary">
-      <div class="section-head">
-        <h2>旅行建议（2天示例）</h2>
-        <span class="section-tag">Plan</span>
-      </div>
-      <div class="grid">
-        <div class="card">
+    <section id="itinerary" class="fade-in">
+      <div class="head"><h2>2天旅行路线</h2><span class="tag">PLAN</span></div>
+      <div class="route">
+        <article class="card">
           <h3>Day 1：城市地标线</h3>
-          <p>福田CBD → 莲花山公园 → 深圳博物馆或当代艺术馆 → 深圳湾公园日落 → 夜间商圈。</p>
-        </div>
-        <div class="card">
+          <p>福田CBD → 莲花山公园 → 博物馆/艺术馆 → 深圳湾日落 → 夜间商圈。</p>
+        </article>
+        <article class="card">
           <h3>Day 2：山海休闲线</h3>
-          <p>南头古城晨逛 → 华侨城创意园午后咖啡 → 大鹏半岛或海边公园 → 海鲜晚餐。</p>
-        </div>
+          <p>南头古城晨逛 → 华侨城创意园 → 大鹏半岛/海滨公园 → 海鲜晚餐。</p>
+        </article>
       </div>
-      <div class="tips" style="margin-top: 14px;">
-        <strong>出行提示：</strong>建议优先地铁+步行；夏季注意防晒补水；节假日热门景点建议错峰前往。
-      </div>
+      <div class="tips"><strong>打包建议：</strong>轻便运动鞋、防晒用品、雨具（春夏季）是高频刚需。</div>
     </section>
 
-    <section id="faq">
-      <div class="section-head">
-        <h2>常见问题</h2>
-        <span class="section-tag">FAQ</span>
-      </div>
+    <section id="faq" class="fade-in">
+      <div class="head"><h2>常见问题</h2><span class="tag">FAQ</span></div>
       <div class="faq">
         <details>
-          <summary>第一次来深圳，住哪里更方便？</summary>
-          <p>如果以城市观光为主，福田和南山交通效率更高；若偏向海边休闲，可考虑靠近深圳湾或大鹏方向。</p>
-        </details>
-        <details>
-          <summary>深圳适合什么季节旅行？</summary>
-          <p>秋冬整体更舒适，温度适中、降雨较少。春夏出行需要准备防晒和雨具。</p>
+          <summary>第一次来深圳住哪里更方便？</summary>
+          <p>福田和南山更适合城市观光与商务；偏海边休闲可选择靠近深圳湾或大鹏区域。</p>
         </details>
         <details>
           <summary>不自驾能否玩好深圳？</summary>
-          <p>可以。地铁覆盖范围广，重点景点之间衔接顺畅，配合网约车可覆盖大多数行程。</p>
+          <p>可以。地铁网络成熟，核心景点之间衔接流畅，结合网约车可覆盖绝大多数行程。</p>
+        </details>
+        <details>
+          <summary>什么季节体验最佳？</summary>
+          <p>秋冬气候更舒适，适合长时间户外活动；春夏请提前关注降雨和台风预警。</p>
         </details>
       </div>
     </section>
   </main>
 
-  <a class="top-link" href="#top" aria-label="回到页面顶部">↑</a>
+  <a class="top" href="#top" aria-label="返回顶部">↑</a>
 
   <footer>
-    <p>页面制作：深圳城市介绍专题页（图文资料用于展示与学习）</p>
+    <p>深圳城市专题页 · 图文资料用于展示与学习</p>
   </footer>
-  <script>
-    const sections = Array.from(document.querySelectorAll('main section[id]'));
-    const navLinks = Array.from(document.querySelectorAll('.nav-inner a'));
-    const map = new Map(navLinks.map(link => [link.getAttribute('href')?.slice(1), link]));
 
-    const observer = new IntersectionObserver((entries) => {
+  <script>
+    const links = Array.from(document.querySelectorAll('.nav-links a'));
+    const sections = Array.from(document.querySelectorAll('main section[id]'));
+    const map = new Map(links.map(link => [link.getAttribute('href').slice(1), link]));
+
+    const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach((l) => l.classList.remove('active'));
-        const active = map.get(id);
-        if (active) active.classList.add('active');
+        links.forEach((l) => l.classList.remove('active'));
+        const link = map.get(entry.target.id);
+        if (link) link.classList.add('active');
       });
-    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 });
+    }, { rootMargin: '-44% 0px -44% 0px', threshold: 0.01 });
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((s) => io.observe(s));
   </script>
 </body>
 </html>
